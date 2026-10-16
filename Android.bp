@@ -1,0 +1,87 @@
+// Auto-generated prebuilt Blueprint for external/bsdiff
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.bsdiff
+
+package {
+    default_applicable_licenses: ["external_bsdiff_license"],
+}
+
+license {
+    name: "external_bsdiff_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+    ],
+    license_text: ["LICENSE"],
+}
+
+cc_prebuilt_library {
+    name: "libbspatch",
+    vendor_available: true,
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    static: {
+        srcs: ["lib/libbspatch.a"],
+    },
+    shared: {
+        srcs: ["lib/libbspatch.so"],
+    },
+    prefer: true,
+    visibility: [
+        "//bootable/recovery:__subpackages__",
+        "//external/puffin:__subpackages__",
+        "//system/update_engine:__subpackages__",
+        "//system/core/fs_mgr/libsnapshot:__subpackages__",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "libbsdiff",
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    static: {
+        srcs: ["lib/libbsdiff.a"],
+    },
+    shared: {
+        srcs: ["lib/libbsdiff.so"],
+    },
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "bspatch",
+    host_supported: true,
+    check_elf_files: false,
+    srcs: ["bin/bspatch"],
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "bsdiff",
+    host_supported: true,
+    check_elf_files: false,
+    srcs: ["bin/bsdiff"],
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}

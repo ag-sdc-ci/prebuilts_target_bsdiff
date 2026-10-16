@@ -1,0 +1,30 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_bsdiff-x86_64-v2.so",
+		    "libdummy_binary_bsdiff.so",
+		    "libdummy_binary_bspatch-x86_64-v2.so",
+		    "libdummy_binary_bspatch.so",
+		    "libdummy_binary_libbsdiff-x86_64-v2.so.so",
+		    "libdummy_binary_libbsdiff.a-x86_64-v2.so",
+		    "libdummy_binary_libbsdiff.a.so",
+		    "libdummy_binary_libbsdiff.so.so",
+		    "libdummy_binary_libbspatch-x86_64-v2.so.so",
+		    "libdummy_binary_libbspatch.a-x86_64-v2.so",
+		    "libdummy_binary_libbspatch.a.so",
+		    "libdummy_binary_libbspatch.so.so",
+		    "libdummy_ext_bsdiff-x86_64-v2.so",
+		    "libdummy_ext_bsdiff.so",
+		    "libdummy_headers_ext_bsdiff-x86_64-v2.so",
+		    "libdummy_headers_ext_bsdiff.so"
+	],
+	"requireLibs": [	
+		    "libbrotlidec.so.1",
+		    "libbrotlienc.so.1",
+		    "libbz2.so",
+		    "libc++_shared.so",
+		    "libc.so",
+		    "libdl.so",
+		    "libm.so"
+	],
+	"visible": true
+}
